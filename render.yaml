@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: climate-backend
+    env: node
+    plan: free
+    buildCommand: "npm install && npm run build"
+    startCommand: "npm run start"
+    envVars:
+      - key: PORT
+        value: "3001"
+      # Las demás variables sensibles (DB_HOST, DB_USER, DB_PASSWORD, JWT_SECRET, WEATHER_API_KEY, etc.)
+      # deben configurarse desde el panel de Render una vez creado el servicio.

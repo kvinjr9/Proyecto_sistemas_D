@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ClimateSite</title>
+
+    <!--Esto es la vinculacion de fonts o tipo de texto-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Coiny&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <!--Esto es la vinculacion de los estilos-->
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body>
+    <header>
+      <div class="log_cl">
+        <h1>CL</h1>
+      </div>
+      <div>
+        <a href="login.html" id="Login" class="Login">Login</a>
+      </div>
+    </header>
+
+    <div id="container_S" class="container_S">
+      <form id="form_city" class="form_city">
+        <div class="form_row">
+          <label for="text_city">Introduce la Ciudad: </label>
+          <input type="text" name="city" id="text_city" class="text_city" />
+          <label for="text_M">Introduce el Departamento: </label>
+          <input type="text" name="Municipio" id="text_M" class="text_M" />
+          <button type="submit" class="btn_city">Enviar</button>
+        </div>
+      </form>
+    </div>
+
+    <div id="container_C" class="container_C">
+      <h2 href="" id="" class="">Grados</h2>
+      <p id="grados" class="grados"></p>
+      <h2 href="" id="" class="">Ciudad</h2>
+      <p id="ciudad" class="ciudad"></p>
+      <h2 href="" id="" class="">Zona hora</h2>
+      <p id="Zonah" class="Zonah"></p>
+    </div>
+    <script type="module" src="script/climate.js"></script>
+  </body>
+</html>

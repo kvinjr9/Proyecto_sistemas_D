@@ -3,6 +3,7 @@ services:
     name: climate-backend
     env: node
     root: src/backend
+    rootDirectory: src/backend
     plan: free
     buildCommand: "npm install && npm run build"
     startCommand: "npm run start"

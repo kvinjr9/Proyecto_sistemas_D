@@ -7,8 +7,8 @@ services:
     # build/start al propio comando. Esto evita problemas con rutas como ".src".
     root: .
     plan: free
-    buildCommand: "cd src/backend && npm install && npm run build"
-    startCommand: "cd src/backend && npm run start"
+  buildCommand: "cd Climesite/backend && npm install && npm run build"
+  startCommand: "cd Climesite/backend && npm run start"
     envVars:
       - key: PORT
         value: "3001"

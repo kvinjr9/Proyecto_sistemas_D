@@ -2,13 +2,12 @@ services:
   - type: web
     name: climate-backend
     env: node
-    # Para evitar ambigüedades en la resolución de rutas dentro del entorno de Render
-    # dejamos el root del repo en el directorio raíz y movemos la lógica de
-    # build/start al propio comando. Esto evita problemas con rutas como ".src".
-    root: .
-    plan: free
-  buildCommand: "cd Climesite/backend && npm install && npm run build"
-  startCommand: "cd Climesite/backend && npm run start"
+  # Establecemos el root directamente en la carpeta del backend para evitar
+  # cualquier concatenación confusa de rutas (por ejemplo src/src o .src).
+  root: Climesite/backend
+  plan: free
+  buildCommand: "npm install && npm run build"
+  startCommand: "npm run start"
     envVars:
       - key: PORT
         value: "3001"
